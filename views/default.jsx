@@ -9,8 +9,26 @@ function Def (html) {
                 <link rel="stylesheet" href="/css/style.css"></link>
             </head>
             <body>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="/places">Places</a>
+                        </li>
+
+                        <li>
+                            <a href="/places/new">Add Places</a>
+                        </li>
+                    </ul>
+                </nav>
                 {html.children}
             </body>
+            <footer className='footer'>
+                <p>sticky</p>
+            </footer>
         </html>
     )
 }

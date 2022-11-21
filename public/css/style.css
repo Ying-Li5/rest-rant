@@ -1,6 +1,17 @@
+body {
+  background-color: #e7c7a7;
+  text-align: center;
+}
+
+main {
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+}
+
 h1 {
     text-align: center;
-    color: cornflowerblue;
+    color:#A7C7E7;
   }
 
 .image-placeholder {
@@ -11,4 +22,37 @@ h1 {
 .sushi-image {
   height: 500px;
   width: 500px;
+}
+
+.footer { 
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0; 
+    height:[footer-height];
+    background-color: #A7C7E7;
+}
+
+nav {
+  background-color: #A7C7E7;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 25px;
+}
+
+nav a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: pink;
+  text-decoration: none;
 }

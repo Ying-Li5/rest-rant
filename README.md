@@ -31,3 +31,4 @@ REST-Rant is an app where users can review restaurants.
 As a (user type) I need (feature) so I can (action)
 
 ## Color Scheme 
+* #A7C7E7
