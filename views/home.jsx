@@ -5,9 +5,9 @@ function home () {
     return (
         <Def>
             <main>
-                <h1>HOME</h1>
+                <h1>REST-Rant</h1>
                 <div>
-                <img src="/images/sushi.jpg" alt="Sushi"/>
+                <img src="/images/sushi.jpg" alt="Sushi" className='sushi-image'/>
                     <div>
                         Photo by <a href="AUTHOR_LINK">Abillion</a> on <a href='UNSPLASH_LINK'>Unsplash</a>
                     </div>
