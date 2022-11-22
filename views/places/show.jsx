@@ -15,10 +15,22 @@ function show (data) {
                 <h3>Description</h3>
                 <p>Located in Phoenix, AZ and serving Coffee, Bakery</p>
             </div>
+            <div>
+                <h3>Comments</h3>
+                <p>No comments yet!</p>
+            </div>
           </main>
+
           <footer>
-            <h3>Comments</h3>
-            <p>No comments yet!</p>
+            <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+                Edit
+            </a>     
+
+            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+                <button type="submit" className="btn btn-danger">
+                    Delete
+                </button>
+            </form> 
           </footer>
         </Def>
     )
