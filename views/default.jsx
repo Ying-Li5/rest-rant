@@ -26,9 +26,9 @@ function Def (html) {
                 </nav>
                 {html.children}
             </body>
-            <footer className='footer'>
+            {/* <footer className='footer'>
                 <p>sticky</p>
-            </footer>
+            </footer> */}
         </html>
     )
 }

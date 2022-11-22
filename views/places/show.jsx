@@ -1,12 +1,25 @@
 const React = require('react')
 const Def = require('../default')
 
-function show () {
+function show (data) {
     return (
         <Def>
           <main>
-            <h1>Show Page</h1>
+            <h1>{ data.place.name }</h1>
+            <img src={data.place.pic} alt={data.place.name} className="image-placeholder" />
+            <div>
+                <h3>Rating</h3>
+                <p>Not Rated</p>
+            </div>
+            <div>
+                <h3>Description</h3>
+                <p>Located in Phoenix, AZ and serving Coffee, Bakery</p>
+            </div>
           </main>
+          <footer>
+            <h3>Comments</h3>
+            <p>No comments yet!</p>
+          </footer>
         </Def>
     )
 }

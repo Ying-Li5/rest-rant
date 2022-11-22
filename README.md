@@ -32,3 +32,4 @@ As a (user type) I need (feature) so I can (action)
 
 ## Color Scheme 
 * #A7C7E7
+* #e7c7a7
