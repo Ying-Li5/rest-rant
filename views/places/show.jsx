@@ -13,7 +13,7 @@ function show (data) {
             </div>
             <div>
                 <h3>Description</h3>
-                <p>Located in Phoenix, AZ and serving Coffee, Bakery</p>
+                <p>Located in {data.place.city}, {data.place.state} and serving {data.place.cuisines}</p>
             </div>
             <div>
                 <h3>Comments</h3>
@@ -32,6 +32,7 @@ function show (data) {
                 </button>
             </form> 
           </footer>
+
         </Def>
     )
 }
