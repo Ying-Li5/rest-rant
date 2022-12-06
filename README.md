@@ -26,7 +26,7 @@ REST-Rant is an app where users can review restaurants.
 | cuisines | string |
 | pic      | string |
 
-### Rant Models
+### Rant Model
 | Field   | Type    | Notes
 | :------ | :------ | :--------------------------------------------------------------- |
 | author  | string  | Name of comment's writer; defaults to Anonymous if missing.      |
