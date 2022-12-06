@@ -17,7 +17,7 @@ REST-Rant is an app where users can review restaurants.
 |      GET       |   `*`                        | 404 Page (matches any route not defined above)   |
 
 # Databases
-**places**
+### Places
 | Field    | Type   |
 | :-----:  | :----: |
 | name     | string |
@@ -25,6 +25,15 @@ REST-Rant is an app where users can review restaurants.
 | state    | string |
 | cuisines | string |
 | pic      | string |
+
+### Rant Models
+| Field   | Type    | Notes
+| :------ | :------ | :--------------------------------------------------------------- |
+| author  | string  | Name of comment's writer; defaults to Anonymous if missing.      |
+| rant    | Boolean | Each comment is either a rant (negative) or a rave (positive).   |
+| stars   | string  | 1 to 5 star rating in increments of 0.5; required, no default.   |
+| content | number  | The written content of the comment, defaults to an empty string. |
+
 
 # Planning 
 ## User Story

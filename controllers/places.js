@@ -20,11 +20,6 @@ router.get('/', (req, res) => {
 
 // CREATE
 router.post('/', (req, res) => {
-  if (!req.body.pic) {
-    // DEFAULT IMAGE IF ONE IS NOT PROVIDED
-    req.body.pic = 'http://placekitten.com/400/400'
-  }
-  
   db.Place.create(req.body)
   .then(() => {
       res.redirect('/places')
