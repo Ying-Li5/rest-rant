@@ -13,7 +13,7 @@ function show (data) {
                         Located in {data.place.city}, {data.place.state}
                     </h3>
                 </div>
-
+                
                 <div className='col-sm-6'>
                     <h3>Rating</h3>
                     <p>Not Rated</p>
