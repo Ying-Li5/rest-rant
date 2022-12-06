@@ -1,7 +1,8 @@
 // const { application } = require('express')
 
 const router = require('express').Router()
-const { trusted } = require('mongoose')
+const mongoose = require('mongoose')
+
 // const places = require('../models/places.js')
 const db = require('../models')
 
@@ -36,7 +37,14 @@ router.get('/new', (req, res) => {
 
 // SHOW
 router.get('/:id', (req, res) => {
-  res.send('GET /places/:id stub')
+  db.Place.findOne({"id": req.params.id})
+  .then((place) => {
+    res.render('places/show', { place })
+  })
+  .catch(err => {
+    console.log('err', err)
+    res.render('error404')
+  })
 })
 
 // UPDATE
