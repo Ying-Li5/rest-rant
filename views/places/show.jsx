@@ -1,4 +1,5 @@
 const React = require('react')
+const places = require('../../models/places')
 const Def = require('../default')
 
 function show (data) {
@@ -12,7 +13,7 @@ function show (data) {
             return (
                 <div className="border">
                     <h2 className="rant">
-                        {c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}
+                        {c.rant ? 'Rant! 😡' : 'Rave! 😊»'}
                     </h2>
                     <h4>{c.content}</h4>
                     <h3>
@@ -46,17 +47,70 @@ function show (data) {
                     <h4> Serving {data.place.cuisines} </h4>
                 </div>
 
-                <div className='col-sm-6'>
+                <div className=''>
                     <h3>Comments</h3>
                     {comments}
                 </div>
+            </div>
+            
+            <br />
+
+            <div className="add-review">
+                <form method="POST" action={`/places/${data.place.id}/comment?_method=POST`}>
+                <h3>Leave Review</h3>
+                    <div className="row">
+                        <div className="add-ratings">
+                            <div className="mb-3">
+                                <label htmlFor="exampleFormControlText" className='contents'>Content</label>
+                                <br />
+                                <textarea 
+                                class='form-control'
+                                type="text"
+                                name='content'
+                                id='content' 
+                                rows='3'
+                                placeholder='Write your review....' />
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="author">Author</label>
+                                <input 
+                                type="text" 
+                                name="author" 
+                                id="author" />
+                            </div>
+
+                            <div className="stars">
+                                <label for="customRange3" class="form-label">Rating</label>
+                                <input 
+                                type="range" 
+                                class="stars" 
+                                name='stars'
+                                min="0"
+                                max="5"
+                                step="0.5"
+                                id="customRange3" />
+                            </div>
+
+                            <div className="mb-3">
+                                <label htmlFor="rant">Rant? </label>
+                                <input 
+                                type="checkbox" 
+                                name="rant" 
+                                id="rant" />
+                            </div>
+
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
           </main>
 
           <footer>
             <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
                 Edit
-            </a>     
+            </a> 
 
             <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                 <button type="submit" className="btn btn-danger">
