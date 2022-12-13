@@ -68,7 +68,9 @@ function show (data) {
 
                             <br />
                             <br />
-                            
+                            <br />
+                            <br />
+
                             <h2>Description</h2>
                             <h3> {data.place.showEstablished()} </h3>
                             <h4> Serving {data.place.cuisines} </h4>
@@ -120,6 +122,15 @@ function show (data) {
                                     max="5"
                                     step="0.5"
                                     id="customRange3" />
+                                </div>
+
+                                <div className="star-rating">
+                                    <label for="stars" className='form-label'>Rating</label>
+                                    <i className="my-star star-1" data-star="1"></i>
+                                    <i className="my-star star-2" data-star="2"></i>
+                                    <i className="my-star star-3" data-star="3"></i>
+                                    <i className="my-star star-4" data-star="4"></i>
+                                    <i className="my-star star-5" data-star="5"></i>
                                 </div>
 
                                 <div className="mb-3">

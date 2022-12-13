@@ -1,9 +1,5 @@
-// const { application } = require('express')
-
 const router = require('express').Router()
 const mongoose = require('mongoose')
-
-// const places = require('../models/places.js')
 const db = require('../models')
 
 // INDEX
