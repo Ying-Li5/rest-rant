@@ -38,6 +38,12 @@ function show (data) {
                         <strong>- {c.author}</strong>
                     </h3>
                     <h4>Rating: {c.stars}</h4>
+                    <form method='POST' action={`/places/${data.place.id}/comment/${c.id}$_method=DELETE`}>
+                        <input 
+                        type="submit"
+                        className='btn btn-danger'
+                        value="Delete comment" />
+                    </form>
                 </div>
             )
         })
@@ -48,7 +54,7 @@ function show (data) {
             <div className="main-content">
                 <div className="row">
                     <form method="POST" action={`/places/${data.place.id}?_method=POST`}>
-                        <div className="col-sm-6 ">
+                        <div className="col-sm-6">
                             <h1>{ data.place.name }</h1>
                             <img src={data.place.pic} alt={data.place.name} className="image-placeholder" />
                             <h3>
@@ -56,19 +62,23 @@ function show (data) {
                             </h3>
                         </div>
                         
-                        <div className='col-sm-6'>
+                        <div className="col-sm-6">
                             <h3>Rating</h3>
                             <h2>{rating}</h2>
-                        </div>
-                        <div className='col-sm-6'>
+
+                            <br />
+                            <br />
+                            
                             <h2>Description</h2>
                             <h3> {data.place.showEstablished()} </h3>
                             <h4> Serving {data.place.cuisines} </h4>
                         </div>
 
-                        <div className=''>
+                        <div className="col-">
                             <h3>Comments</h3>
-                            {comments}
+                            <div className="comments">
+                                {comments}
+                            </div>
                         </div>
                     </form>
                 </div>

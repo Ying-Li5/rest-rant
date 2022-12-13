@@ -53,6 +53,16 @@ router.post('/:id/comment', (req, res) => {
   })
 })
 
+router.delete('/:id/comment', (req, res) => {
+  db.Place.findByIdAndDelete({"_id": req.params.id})
+  .then((place) => {
+    res.redirect('/places')
+  })
+  .catch(err => {
+    console.log('err', err)
+    res.render('error404')
+  })
+})
 
 // NEW
 router.get('/new', (req, res) => {
